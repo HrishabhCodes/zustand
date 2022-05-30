@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #718093;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  padding: 0%;
+}
+
+/* ONBOARDING PAGE */
+
+.form {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.age-input {
+  width: 100%;
+}
+
+/* PROFILE PAGE */
+
+.profile-page {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-cont {
+  background-color: #dcdde1;
+  display: flex;
+  width: 50%;
+  border: 2px solid black;
+  height: 300px;
+}
+
+.icon {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
 }
 
-.App-link {
-  color: #61dafb;
+.avatar {
+  border-radius: 50%;
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  padding: 2rem;
+}
+
+.name-details, .age-details, .gender-details {
+  width: 90%;
+  position: relative;
+}
+
+label {
+  color: #5a5a5a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+p {
+  color: #727272;
+}
+
+.name, .age, .gender {
+  font-size: 13px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.name-antd {
+  width: 100%;
+}
+
+.edit, .save {
+  position: absolute;
+  color: #5a5a5a;
+  top: 1.9rem;
+  right: -1.5rem;
+}
+
+.edit:hover, .save:hover {
+  cursor: pointer;
+}
+
+.antd-select {
+  display: block;
+}
+
+.antd {
+  margin-bottom: 0.8rem;
 }
