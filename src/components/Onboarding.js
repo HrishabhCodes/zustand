@@ -14,72 +14,82 @@ const Onboarding = () => {
   };
 
   return (
-    <Form name="basic" className="form" autoComplete="off">
-      <Form.Item
-        label="Name"
-        name="name"
-        rules={[
-          {
-            required: true,
-            message: "Please input your name!",
-          },
-        ]}
-      >
-        <Input onChange={(e) => setName(e.target.value)} value={name} />
-      </Form.Item>
+    <div className="onboarding-page">
+      <Form name="basic" className="form" autoComplete="off">
+        <p className="heading">Enter Your Details</p>
 
-      <Form.Item
-        label="Age"
-        name="age"
-        rules={[
-          {
-            required: true,
-            message: "Please input your age!",
-          },
-        ]}
-      >
-        <Input
-          onChange={(e) => setAge(e.target.value)}
-          value={age}
-          type="number"
-          className="age-input"
-        />
-      </Form.Item>
-
-      <Form.Item
-        name="Gender"
-        label="Gender"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Select
-          onChange={(value) => setGender(value)}
-          value={gender}
-          placeholder="Select gender"
-          allowClear
+        <p className="fields">
+          Name <span className="required">*</span>
+        </p>
+        <Form.Item
+          name="name"
+          rules={[
+            {
+              required: true,
+              message: "Please input your name!",
+            },
+          ]}
         >
-          <Select.Option value="Male">Male</Select.Option>
-          <Select.Option value="Female">Female</Select.Option>
-          <Select.Option value="Other">Other</Select.Option>
-        </Select>
-      </Form.Item>
+          <Input onChange={(e) => setName(e.target.value)} value={name} />
+        </Form.Item>
 
-      <Form.Item>
-        <Link to="profile">
-          <Button
-            disabled={isFormComplete}
-            onClick={(e) => handleStore(name, age, gender)}
-            type="primary"
-            htmlType="submit"
+        <p className="fields">
+          Age <span className="required">*</span>
+        </p>
+        <Form.Item
+          name="age"
+          rules={[
+            {
+              required: true,
+              message: "Please input your age!",
+            },
+          ]}
+        >
+          <Input
+            onChange={(e) => setAge(e.target.value)}
+            value={age}
+            type="number"
+            className="age-input"
+          />
+        </Form.Item>
+
+        <p className="fields">
+          Gender <span className="required">*</span>
+        </p>
+        <Form.Item
+          name="Gender"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Select
+            onChange={(value) => setGender(value)}
+            value={gender}
+            placeholder="Select gender"
+            allowClear
           >
-            Continue
-          </Button>
-        </Link>
-      </Form.Item>
-    </Form>
+            <Select.Option value="Male">Male</Select.Option>
+            <Select.Option value="Female">Female</Select.Option>
+            <Select.Option value="Other">Other</Select.Option>
+          </Select>
+        </Form.Item>
+
+        <Form.Item>
+          <Link to="profile">
+            <Button
+              disabled={isFormComplete}
+              onClick={(e) => handleStore(name, age, gender)}
+              type="primary"
+              htmlType="submit"
+            >
+              Continue
+            </Button>
+          </Link>
+        </Form.Item>
+      </Form>
+    </div>
   );
 };
 

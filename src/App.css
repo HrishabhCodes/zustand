@@ -19,12 +19,37 @@ html {
 /* ONBOARDING PAGE */
 
 .form {
-  width: 70%;
-  margin: 2rem auto;
+  background-color: #dcdde1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  height: 400px;
+  border: 2px solid rgb(113, 113, 113);
+  padding: 3rem;
+  margin: 5rem auto;
+}
+
+.heading {
+  color: #718093;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
+.fields {
+  margin-bottom: 0;
+  color: #777777;
+}
+
+.required {
+  color: red;
 }
 
 .age-input {
-  width: 100%;
+  width: 100%; 
 }
 
 /* PROFILE PAGE */
