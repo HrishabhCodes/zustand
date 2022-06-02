@@ -1,4 +1,4 @@
-# [Job-Posting Form](https://zustand-assignment.netlify.app/)
+# [Understanding Zustand](https://zustand-assignment.netlify.app/)
 
 ## Tools/Frameworks/Libraries Used
 - React
